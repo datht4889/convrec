@@ -30,27 +30,27 @@ def parse_args():
     # args = parser.parse_args()
 
     args = {
-        'zero_shot' : False
-        'data_name' : 'inspired'
-        'alpha' : 0.5
-        'beta' : 0.2
-        'temp' : 0.05
-        'query_used_info' : ['c', 'l', 'd']
-        'doc_used_info' : ['m', 'pref']
-        'bf16' : False
-        'negative_sample' : 16
-        'epochs' : 100
-        'accumulation_steps' : 8
-        'base_model_name' : 'nvidia/NV-Embed-v1'
-        'learning_rate' : 1e-4
-        'patience' : 5
-        'batch_size' : 10
-        'ckpt_save_path' : 'checkpoints'
-        'seed' : 2024
-        'cutoff' : [5, 10, 50]
-        'wandb_project' : None
-        'wandb_entity' : None
-        'wandb_group' : None
+        'zero_shot' : False,
+        'data_name' : 'inspired',
+        'alpha' : 0.5,
+        'beta' : 0.2,
+        'temp' : 0.05,
+        'query_used_info' : ['c', 'l', 'd'],
+        'doc_used_info' : ['m', 'pref'],
+        'bf16' : True,
+        'negative_sample' : 16,
+        'epochs' : 100,
+        'accumulation_steps' : 8,
+        'base_model_name' : 'nvidia/NV-Embed-v1',
+        'learning_rate' : 1e-4,
+        'patience' : 5,
+        'batch_size' : 10,
+        'ckpt_save_path' : 'checkpoints',
+        'seed' : 2024,
+        'cutoff' : [5, 10, 50],
+        'wandb_project' : None,
+        'wandb_entity' : None,
+        'wandb_group' : None,
     }
 
 
