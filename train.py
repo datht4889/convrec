@@ -15,7 +15,7 @@ from options import parse_args
 
 
 def main(training_args):
-    training_args = vars(training_args)
+    # training_args = vars(training_args)
     print("> Training arguments")
     for k, v in training_args.items():
         print(f'{k}: {v}')
