@@ -20,7 +20,7 @@ def main(training_args):
     for k, v in training_args.items():
         print(f'{k}: {v}')
 
-    data_path = Path('data') / training_args['data_name']
+    data_path = Path('/kaggle/input/convrecdata') / training_args['data_name']
     train_path = data_path / 'input_processed_train.jsonl'
     valid_path = data_path / 'input_processed_valid.jsonl'
     test_path = data_path / 'input_processed_test.jsonl'
