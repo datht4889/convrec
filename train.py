@@ -83,15 +83,15 @@ def main(training_args):
     if training_args['wandb_project'] is not None:
         wandb_tag = [
             training_args['data_name'],
-            f"seed_{args.seed}",
+            f"seed_{args['seed']}",
             f"query_used_info_{training_args['query_used_info']}",
             f"doc_used_info_{training_args['doc_used_info']}",
         ]
         wandb_logger = wandb.init(
-            project=args.wandb_project,
-            entity=args.wandb_entity,
+            project=args['wandb_project'],
+            entity=args['wandb_entity'],
             name=random_word_and_date,
-            group=args.wandb_group if args.wandb_group else training_args['data_name'],
+            group=args['wandb_group'] if args['wandb_group'] else training_args['data_name'],
             config=training_args,
             tags=wandb_tag
         )
@@ -146,6 +146,6 @@ def main(training_args):
 
 if __name__ == '__main__':
     args = parse_args()
-    set_randomness(args.seed)
+    set_randomness(args['seed'])
 
     main(args)
